@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse-events</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container mx-0 px-5">
+        <div class="row">
+            <div class="col-2 px-2">
+                <div class="mybox">
+                    <h1>SPRING</h1>
+                    <h1>SUMMER</h1>
+                    <h1>AUTUMN</h1>
+                    <h1>WINTER</h1>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="imges">
+                    <img src="img/s.jpg" alt="">
+                    <img src="img/su.jpg" alt="">
+                    <img src="img/a.jpg" alt="">
+                    <img src="img/w.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    let _h1=document.querySelectorAll('.mybox>h1')
+    let mn=document.querySelectorAll('.imges>img')
+    document.getElementsByClassName('mybox')[0].addEventListener('mousedown',()=>{
+        _h1[0].style.color='green'
+        mn[0].style.display='block'
+    })
+    document.getElementsByClassName('mybox')[0].addEventListener('wheel',()=>{
+        _h1[1].style.color='#FFC107'
+        mn[1].style.display='block'
+    })
+    document.getElementsByClassName('mybox')[0].addEventListener('mouseleave',()=>{
+        _h1[2].style.color='#FF5722'
+        mn[2].style.display='block'
+    })
+    document.getElementsByClassName('mybox')[0].addEventListener('mouseup',()=>{
+        _h1[3].style.color='white'
+        mn[3].style.display='block'
+    })
+</script>
+
+</html>
